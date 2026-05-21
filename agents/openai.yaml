@@ -1,0 +1,3 @@
+display_name: ABS Local Prospector
+short_description: Qualify local leads for ABS.
+default_prompt: Use $abs-local-prospector to find local businesses near a target location that may need websites, automation, AI ops, CRM, booking, or Google Business improvements. Return a concise qualified lead sheet with best first outreach targets.

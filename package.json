@@ -1,0 +1,41 @@
+{
+  "name": "abs-local-prospector-skill",
+  "version": "0.1.0",
+  "description": "Codex skill for qualifying local business prospects for Astraeus Business Solutions.",
+  "homepage": "https://github.com/SarutobiSasuke8/abs-local-prospector-skill#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarutobiSasuke8/abs-local-prospector-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SarutobiSasuke8/abs-local-prospector-skill/issues"
+  },
+  "bin": {
+    "abs-local-prospector-skill": "bin/install.js"
+  },
+  "scripts": {
+    "check": "node --check bin/install.js",
+    "pack:dry-run": "npm pack --dry-run"
+  },
+  "files": [
+    "SKILL.md",
+    "agents",
+    "references",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "codex",
+    "skill",
+    "astraeus",
+    "local-business",
+    "prospecting",
+    "lead-generation",
+    "sales"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
