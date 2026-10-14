@@ -15,30 +15,33 @@ It helps Codex research local businesses, identify weak digital presence, score 
 
 ## Install
 
-From this folder:
+From this folder (the package has no dependencies, so `npm install` is not needed):
 
 ```powershell
-npm install
 node bin/install.js
 ```
 
-To replace an existing installed copy:
-
-```powershell
-node bin/install.js --force
-```
-
-This installs the skill to:
+This copies `SKILL.md`, `agents/` and `references/` to:
 
 ```text
 %USERPROFILE%\.codex\skills\abs-local-prospector
 ```
+
+On macOS or Linux the default is `~/.codex/skills/abs-local-prospector`.
 
 If `CODEX_HOME` is set, it installs to:
 
 ```text
 %CODEX_HOME%\skills\abs-local-prospector
 ```
+
+Running the installer again when the skill is already installed is safe: it stops with "Skill already exists" and leaves the installed copy untouched. To replace an existing installed copy:
+
+```powershell
+node bin/install.js --force
+```
+
+`--force` deletes the installed `abs-local-prospector` folder (including any local edits in it) and copies a fresh one. Other skills in the same folder are not touched.
 
 Restart Codex or start a new session after installing.
 
@@ -62,10 +65,24 @@ Check the installer syntax:
 npm run check
 ```
 
+Run the installer tests (Node's built-in test runner, no extra dependencies; each test installs into a temporary folder, never your real Codex home):
+
+```powershell
+npm test
+```
+
+Preview the package contents without publishing:
+
+```powershell
+npm run pack:dry-run
+```
+
+CI runs all three on Node 18 and 22 (Ubuntu and Windows) for every pull request.
+
 Validate the skill with Codex's skill validator:
 
 ```powershell
-python C:\Users\sarut\.codex\skills\.system\skill-creator\scripts\quick_validate.py .
+python %USERPROFILE%\.codex\skills\.system\skill-creator\scripts\quick_validate.py .
 ```
 
 ## Compliance

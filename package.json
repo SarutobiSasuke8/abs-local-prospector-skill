@@ -15,6 +15,7 @@
   },
   "scripts": {
     "check": "node --check bin/install.js",
+    "test": "node --test test/install.test.js",
     "pack:dry-run": "npm pack --dry-run"
   },
   "files": [
